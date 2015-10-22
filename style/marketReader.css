@@ -30,7 +30,7 @@ td{
     -webkit-transition-duration: 1s;
     transition-property: opacity;
     transition-duration: 1s;
-    opacity:.5;
+    opacity:.7;
 }
 td:hover {
     opacity: 1;
@@ -74,3 +74,16 @@ td:hover {
     font-size:20px;
     
 }
+
+.active{
+    //background-color: red !important;
+    //color:red;
+    opacity: 1;
+}
+
+.passive{
+    //background-color: white;
+       //color:green;
+    
+}
+

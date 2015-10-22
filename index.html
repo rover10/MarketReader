@@ -14,7 +14,7 @@
             <div  class="container">
                     <table  class="table table-hover">
                         <tbody >
-                            <tr ng-repeat="x in secClass"><td ng-click=fun(x)><span>{{x}}</span></td></tr>
+                            <tr ng-repeat="x in secClass"><td ng-click=fun(x) class ="{{ x == secTitle && 'active' || 'passive' }}"><span><a href="#">{{x}}</a></span></td></tr>
                         </tbody>    
                     </table>
             </div>
