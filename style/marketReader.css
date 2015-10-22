@@ -79,6 +79,7 @@ td:hover {
     //background-color: red !important;
     //color:red;
     opacity: 1;
+    font-weight: bold;
 }
 
 .passive{
@@ -87,3 +88,21 @@ td:hover {
     
 }
 
+.widget{
+    position: fixed;
+    width:200px;
+    height:100px;
+    background-color: oldlace;
+    color:Black;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: thin;
+    
+}
+
+
+.secChart{
+    position: absolute;
+    width:100px;
+    height:40px;
+}
