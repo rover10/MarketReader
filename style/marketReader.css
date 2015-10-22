@@ -90,9 +90,9 @@ td:hover {
 
 .widget{
     position: fixed;
-    width:200px;
+    width:300px;
     height:100px;
-    background-color: oldlace;
+    background-color:gainsboro;
     color:Black;
     border-style: solid;
     border-color: darkgray;
@@ -103,6 +103,7 @@ td:hover {
 
 .secChart{
     position: absolute;
-    width:100px;
+    width:200px;
     height:40px;
+    background-color: red;
 }
