@@ -2,11 +2,10 @@
 <head>
     <link rel = "stylesheet" type="text/css" href="style/marketReader.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/angular.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/controller.js"></script>    
-
+    <script src="scripts/jquery.min.js" type="application/javascript"></script>
+    <script src="scripts/angular.min.js" type="application/javascript"></script>
+    <script src="scripts/bootstrap.min.js" type="application/javascript"></script>
+    <script src="scripts/controller.js" type="application/javascript"></script>    
 </head>
 <body>
     <div ng-app="financialApp" ng-controller="finController" class="appBody">
@@ -32,7 +31,8 @@
                     </div>
                     <div draggable class="widget"> Security historical performace chart
                         <div class="secChart"></div>
-
+                        <a href="#" ng-click=stockData('AAPL')> Apple</a>
+                        {{dataStr}}
                     </div>
                 </div>
                     

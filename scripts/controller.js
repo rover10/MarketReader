@@ -5,6 +5,23 @@ app.controller('finController', function($scope, $http){
     $scope.secTitle = $scope.secClass[0];
     $scope.fun = function(name){$scope.secTitle =name;};
     $scope.user = "Data";
+        $scope.stockData = function(stockid){
+        url = "http://www.google.com/finance/info?q=AAPL&callback=JSON_CALLBACK";        
+            $http.jsonp(url).
+            success(function(data,status,headers,config) {
+              console.warn(data);
+              // alert(data);
+                $scope.dataStr = "";
+                for(x in data[0])
+                     $scope.dataStr += data[0][x];
+                //successcb(data);
+            }).
+            error(function(data, status,headers, config) {
+              //alert("Status is " + status);
+            
+            });
+    };
+    
 });
 
 
