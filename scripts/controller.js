@@ -1,7 +1,7 @@
 var app=angular.module('financialApp',[]);
 app.controller('finController', function($scope, $http){
     $scope.x = "Thimarket";
-    $scope.secClass = ["Equities", "Mutual funds", "Bonds", "Commodities", "Forex", "Exchange Traded Funds", ];
+    $scope.secClass = ["Equities", "Mutual funds", "Bonds", "Commodities", "Forex", "Exchange Traded Funds","Derivatives" ];
     $scope.secTitle = $scope.secClass[0];
     $scope.fun = function(name){$scope.secTitle =name;};
     $scope.user = "Data";
@@ -25,6 +25,18 @@ app.directive('draggable', function($document) {
       });
 
       function mousemove(event) {
+        if(x<0 || y<0){
+            if(x<0)
+                x = startX;
+            if(y<0)
+                y = startY;
+                element.css({
+                top: y + 'px',
+                left:  x + 'px'
+                });
+            return;  
+        }
+            
         y = event.screenY - startY;
         x = event.screenX - startX;
         element.css({

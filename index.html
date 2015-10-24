@@ -11,10 +11,16 @@
 <body>
     <div ng-app="financialApp" ng-controller="finController" class="appBody">
             <div class="leftPanel">
-            <div  class="container">
+            <div  class="">
                     <table  class="table table-hover">
-                        <tbody >
-                            <tr ng-repeat="x in secClass"><td ng-click=fun(x) class ="{{ x == secTitle && 'active' || 'passive' }}"><span><a href="#">{{x}}</a></span></td></tr>
+                        <tbody>
+                            <tr ng-repeat="x in secClass">
+                                <td ng-click=fun(x) class ="{{ x == secTitle && 'active' || 'passive' }}">
+                                    <span>
+                                        <a href="#">{{x}}</a>
+                                    </span>
+                                </td>
+                            </tr>
                         </tbody>    
                     </table>
             </div>
@@ -22,7 +28,7 @@
             <div class="detailView">
                 <div class="securityDashboard" id="equity">
                     <div class="securityTitle">
-                        <center> <div id="secName"> <p id="tname">{{secTitle}}<p></div></center>
+                        <center> <div id="secName"> <p id="tname">{{secTitle}}</p></div></center>
                     </div>
                     <div draggable class="widget"> Security historical performace chart
                         <div class="secChart"></div>
