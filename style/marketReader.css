@@ -109,3 +109,16 @@ td:hover {
     height:200px;
     background-color:gery;
 }
+
+.datastyle{
+    color:black;
+    background-color:whitesmoke;
+    border-color:greenyellow;
+    border-radius: 10px;
+    width:100%; 
+}
+
+.datastyle:focus{
+    background-color: greenyellow;
+    height:100px;
+}

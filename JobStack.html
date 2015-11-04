@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel = "stylesheet" type="text/css" href="style/marketReader.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="scripts/jquery.min.js" type="application/javascript"></script>
+    <script src="scripts/angular.min.js" type="application/javascript"></script>
+    <script src="scripts/bootstrap.min.js" type="application/javascript"></script>
+    <script src="scripts/jobstackController.js" type="application/javascript"></script>    
+</head>
+<body>
+    <div ng-app="financialApp" ng-controller="finController" class="appBody">
+            <div class="leftPanel">
+            <div  class="">
+                    <table  class="table table-hover">
+                        <tbody>
+                            <tr ng-repeat="x in secClass | orderBy:x:reverse">
+                                <td ng-click=fun(x) class ="{{ x == secTitle && 'active' || 'passive' }}">
+                                    <span>
+                                        <a href="#">{{x}}</a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>    
+                    </table>
+            </div>
+            </div>
+            <div class="detailView">
+                <div class="securityDashboard" id="equity">
+                    <div class="securityTitle">
+                        <center> <div id="secName"> <p id="tname">{{secTitle}}</p></div></center>
+                    </div>
+                    <div draggable class="widget"> Security historical performace chart
+                        <div class="secChart"></div>
+                        <a href="#" ng-click=addObject('Job')> Add</a>
+                        <div><a href="#" ng-click=addStack()>Stack+</a></div>
+                        
+                          
+                        {{dataStr}}
+                    </div>
+                    <stack> </stack>
+                </div>
+                
+            </div>    
+        </div>
+</body>
+</html>
