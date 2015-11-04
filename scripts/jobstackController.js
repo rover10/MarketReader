@@ -68,7 +68,7 @@ app.directive(dname, function() {
         restrict: "E",
         template: "<div id='testdiv' class='stackstyle'>"+
             "<div id='stack'> </div>" +
-            "<button data-ng-click='append()'>Add</button>" +
+            "<button data-ng-click='append()' class='push'>Push+</button>" +
         "</div>",
         controller: function($scope, $element, $attrs) {
             $scope.append = function() {

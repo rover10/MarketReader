@@ -122,3 +122,12 @@ td:hover {
     background-color: greenyellow;
     height:100px;
 }
+
+.push{
+    color:black;
+    font-weight: 900;
+    font-size: 20px;
+}
+.push:hover{
+    text-shadow: 1px 1px 1px;
+}
