@@ -29,16 +29,21 @@
                     <div class="securityTitle">
                         <center> <div id="secName"> <p id="tname">{{secTitle}}</p></div></center>
                     </div>
+                    <div class="secChart"></div>
+                    <div>
                     <div draggable class="widget"> Security historical performace chart
-                        <div class="secChart"><stack> </stack></div>
+                        
                         <a href="#" ng-click=addObject('Job')> Add</a>
                         
-                        <div><a href="#" ng-click=addStack()>Stack+</a></div>
-                        
+                        <a href="#" ng-click=addStack()>Stack+</a>
+                      
                           
                         {{dataStr}}
+                        <stack> </stack>
+                     <DIV style="z-index:99999;position:relative; "></DIV>
                     </div>
-                    
+                         
+                    </div>
                 </div>
                 
             </div>    

@@ -14,6 +14,7 @@ app.controller('finController', function($scope, $http){
         //$scope.objectCounter++;
     };
     
+    $scope.setFocus = function(currentObject){ alert(); currentObject.focus=true;};
 });
 
 
@@ -21,16 +22,15 @@ app.directive('draggable', function($document) {
     return function(scope, element, attr) {
       var startX = 0, startY = 0, x = 0, y = 0;
       element.css({
-       position: 'relative',
-       
-      });
+       position: 'relative', });
       element.on('mousedown', function(event) {
         // Prevent default dragging of selected content
-        event.preventDefault();
+        //event.preventDefault();
         startX = event.screenX - x;
         startY = event.screenY - y;
         $document.on('mousemove', mousemove);
         $document.on('mouseup', mouseup);
+        
       });
 
       function mousemove(event) {
@@ -66,15 +66,14 @@ var dname = 'stack';
 app.directive(dname, function() {
     return {
         restrict: "E",
-        template: "<div id='testdiv' class='stackstyle'>"+
-            "<div id='stack'> </div>" +
-            "<button data-ng-click='append()' class='push'>Push+</button>" +
-        "</div>",
+        template: "<button data-ng-click='append()' class='push'>Push+</button>" + "<div id='testdiv' class='stackstyle'>"+
+            "<div id='stack'> </div>" + "</div>",
         controller: function($scope, $element, $attrs) {
             $scope.append = function() {
-                var p = angular.element("<DIV><textarea class='datastyle'</DIV>");
+                var p = angular.element("<DIV><textarea class='datastyle' spellcheck='false' ng-click='setFocus()'></textarea></DIV>");
                 //p.text("Appended");
-                $element.find("#testdiv").append(p);
+                $element.find("#testdiv").prepend(p);
+                //$element.find('#testdiv').appendTo(p);
             }
         }
     }
