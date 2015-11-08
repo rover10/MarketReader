@@ -1,8 +1,12 @@
 var app=angular.module('financialApp',[]);
 app.controller('finController', function($scope, $http){
     $scope.x = "Thimarket";
-    $scope.secClass = ["Equities", "Mutual funds", "Bonds", "Commodities", "Forex", "Exchange Traded Funds","Derivatives" ];
-    $scope.secTitle = $scope.secClass[0];
+    $scope.secClass = [[["Equities"], ['Apple','Google','Microsoft','Facebook','Twitter']], [["Mutual funds"], ["SPY	SPDR S&P 500 ETF", "VFIAX	Vanguard 500 Index;Adm","VTSAX	Vanguard TSM Idx;Adm", "FDRXX	Fidelity Cash Reserves","VMMXX	Vanguard Prime MM;Inv"
+]], [["Bonds"],["Colorado Bond Shares Tax-Exempt","Gurtin California Muni Val Inst","Gurtin National Muni Val Inst","Zeo Strategic Income I",
+"Guggenheim Floating Rate Strat"]],[["Commodities"],["Gold", "Copper","Silver","Sugar","Corn","Cotton","Coffee","Crude oil"]], [["Forex"],[
+"EURUSD","GBPUSD","USDJPY","USDCHF","AUDUSD","USDCAD"]], [["Exchange Traded Funds"],["SPDR S&P 500 ETF","iShares S&P 100 ETF","iShares U.S. Preferred Stock ETF","iShares Gold Trust","Market Vectors Gold Miners ETF"]],[["Derivatives"],["USD1601","EUR1512","USD1511","USD1512","EUR/USD1511","USD/JPY1512"
+]]];
+    $scope.secTitle = $scope.secClass.secName;
     $scope.fun = function(name){$scope.secTitle =name;};
     $scope.user = "Data";
         $scope.stockData = function(stockid){
@@ -23,6 +27,14 @@ app.controller('finController', function($scope, $http){
     };
     
 });
+
+
+
+
+	
+
+
+
 
 
 app.directive('draggable', function($document) {

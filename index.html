@@ -11,13 +11,25 @@
     <div ng-app="financialApp" ng-controller="finController" class="appBody">
             <div class="leftPanel">
             <div  class="">
-                    <table  class="table table-hover">
+                    <table  class="" style="width:100%;">
                         <tbody>
                             <tr ng-repeat="x in secClass">
-                                <td ng-click=fun(x) class ="{{ x == secTitle && 'active' || 'passive' }}">
-                                    <span>
-                                        <a href="#">{{x}}</a>
-                                    </span>
+                                <td ng-click=fun(x[0][0]) class ="{{ x[0] == secTitle && 'active' || 'passive' }}">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{x[0][0]}}
+                                        <span class="caret"> </span>
+                                        </a>
+                                        <ul class="dropdown-menu" ng-repeat="y in x track by $index">  
+                                            <ul ng-repeat="z in y">
+                                                <a href="#">
+                                                <li class="dropdown">{{z}}</li>
+                                                </a>
+                                            </ul>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                    
                                 </td>
                             </tr>
                         </tbody>    
@@ -26,14 +38,25 @@
             </div>
             <div class="detailView">
                 <div class="securityDashboard" id="equity">
-                    <div class="securityTitle">
-                        <center> <div id="secName"> <p id="tname">{{secTitle}}</p></div></center>
+
+                <div class="panel panel-primary">
+                <div class="panel-heading secName">{{secTitle}} </div>
+                <div class="panel-body">
+                    <div class="alert alert-success fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> This alert box could indicate a successful or positive action.
                     </div>
+                     
                     <div draggable class="widget"> Security historical performace chart
                         <div class="secChart"></div>
                         <a href="#" ng-click=stockData('AAPL')> Apple</a>
                         {{dataStr}}
                     </div>
+                    Panel Content
+                    
+                </div>
+                </div>
+                   
                 </div>
                     
             </div>    

@@ -14,7 +14,7 @@ app.controller('finController', function($scope, $http){
         //$scope.objectCounter++;
     };
     
-    $scope.setFocus = function(currentObject){ alert(); currentObject.focus=true;};
+    
 });
 
 
@@ -66,11 +66,10 @@ var dname = 'stack';
 app.directive(dname, function() {
     return {
         restrict: "E",
-        template: "<button data-ng-click='append()' class='push'>Push+</button>" + "<div id='testdiv' class='stackstyle'>"+
-            "<div id='stack'> </div>" + "</div>",
+        template: "<button data-ng-click='append()' class='push'>Push+</button>" + "<div id='testdiv' class='stackstyle'></div>",
         controller: function($scope, $element, $attrs) {
             $scope.append = function() {
-                var p = angular.element("<DIV><textarea class='datastyle' spellcheck='false' ng-click='setFocus()'></textarea></DIV>");
+                var p = angular.element("<DIV><textarea class='datastyle' spellcheck='false'    ></textarea></DIV>");
                 //p.text("Appended");
                 $element.find("#testdiv").prepend(p);
                 //$element.find('#testdiv').appendTo(p);

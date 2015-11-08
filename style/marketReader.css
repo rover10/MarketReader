@@ -75,7 +75,7 @@ td:hover {
 }
 
 .active{
-    //background-color: red !important;
+    background-color: whitesmoke !important;
     //color:red;
     opacity: 1;
     font-weight: bold;
@@ -119,6 +119,7 @@ td:hover {
     width:100%; 
     text-decoration-skip: edges;
     font-family:serif;
+    font-size: 16px !important;
     //text-shadow: 1px 0px 0px black;
     font-weight: 500;
     -webkit-appearance:none;
@@ -134,10 +135,10 @@ td:hover {
 }
 
 .datastyle:focus{
-    background-color: white !important;
+    background-color: black !important;
     box-shadow: 5px 2px 10px gray;
     text-shadow: 0px 0px 0px grey;
-    color:black;
+    color:white !important;
     height:100px;
     z-index: 999999999;
     border-top-style: none;
