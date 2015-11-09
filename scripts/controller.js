@@ -7,7 +7,13 @@ app.controller('finController', function($scope, $http){
 "EURUSD","GBPUSD","USDJPY","USDCHF","AUDUSD","USDCAD"]], [["Exchange Traded Funds"],["SPDR S&P 500 ETF","iShares S&P 100 ETF","iShares U.S. Preferred Stock ETF","iShares Gold Trust","Market Vectors Gold Miners ETF"]],[["Derivatives"],["USD1601","EUR1512","USD1511","USD1512","EUR/USD1511","USD/JPY1512"
 ]]];
     $scope.secTitle = $scope.secClass.secName;
-    $scope.fun = function(name){$scope.secTitle =name;};
+    $scope.setSecName = function(secName, secTitle){
+        $scope.secName = secName;
+        $scope.secTitle = secTitle;
+    };
+    $scope.fun = function(name){
+        return;
+    };
     $scope.user = "Data";
         $scope.stockData = function(stockid){
         url = "http://www.google.com/finance/info?q=AAPL&callback=JSON_CALLBACK";        

@@ -14,16 +14,16 @@
                     <table  class="" style="width:100%;">
                         <tbody>
                             <tr ng-repeat="x in secClass">
-                                <td ng-click=fun(x[0][0]) class ="{{ x[0] == secTitle && 'active' || 'passive' }}">
+                                <td  class ="{{ x[0] == secTitle && 'active' || 'passive' }}">
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li class="dropdown">
+                                    <li class="dropdown ">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{x[0][0]}}
                                         <span class="caret"> </span>
                                         </a>
-                                        <ul class="dropdown-menu" ng-repeat="y in x track by $index">  
+                                        <ul class="dropdown-menu subSecurity" ng-repeat="y in x track by $index">  
                                             <ul ng-repeat="z in y">
                                                 <a href="#">
-                                                <li class="dropdown">{{z}}</li>
+                                                <li class="dropdown secName" ng-click="setSecName(z, x[0][0]); fun(x[0][0])">{{z}}</li>
                                                 </a>
                                             </ul>
                                         </ul>
@@ -40,7 +40,7 @@
                 <div class="securityDashboard" id="equity">
 
                 <div class="panel panel-primary">
-                <div class="panel-heading secName">{{secTitle}} </div>
+                    <div class="panel-heading secName">{{secTitle}}>> <strong>{{secName}}</strong> </div>
                 <div class="panel-body">
                     <div class="alert alert-success fade in">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

@@ -26,14 +26,14 @@
 }
 
 td{
-    -webkit-transition-property:opaticy;
-    -webkit-transition-duration: 1s;
-    transition-property: opacity;
-    transition-duration: 1s;
-    opacity:.7;
+    //-webkit-transition-property:opaticy;
+    //-webkit-transition-duration: 1s;
+    //transition-property: opacity;
+    //transition-duration: 1s;
+    //opacity:.7;
 }
 td:hover {
-    opacity: 1;
+    //opacity: 1;
 }
 
 .securityDashboard{
@@ -165,4 +165,28 @@ td:hover {
 }
 .push:hover{
     text-shadow: 1px 1px 1px;
+}
+
+.subSecurity{
+    background-color: black !important;
+    color:white !important;
+    z-index: 99999999999 !important;    
+}
+
+.subSecurity:hover{
+    background-color: black;
+    
+}
+
+.secName{
+    color: whitesmoke;
+    font-weight: 100;
+    
+}
+
+
+.secName:hover{
+    color:dodgerblue;
+    font-weight: 100;
+    
 }
