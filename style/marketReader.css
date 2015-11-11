@@ -190,3 +190,7 @@ td:hover {
     font-weight: 100;
     
 }
+
+.paneBody{
+    overflow-y: auto;
+}
