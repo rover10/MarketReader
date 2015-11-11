@@ -89,8 +89,12 @@ body {
                       <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#home">Price trend</a></li>
                         <li><a data-toggle="tab" href="#menu1">Candle stick chart</a></li>
-                        <li><a data-toggle="tab" href="#menu2">Predicted trends</a></li>
+                        <li><a data-toggle="tab" href="#menu2">Predicted trend</a></li>
                         <li><a data-toggle="tab" href="#menu3">Compare</a></li>
+                        <li><a data-toggle="tab" href="#menu4">Risk analysis</a></li>
+                        <li><a data-toggle="tab" href="#menu5">Market volatility</a></li>
+                        <li><a data-toggle="tab" href="#menu6">Data crunch advisory report</a></li>
+                          
                       </ul>
                       <div class="tab-content">
                         <div id="home" class="tab-pane fade in active">
@@ -134,8 +138,8 @@ body {
 <script>
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 700 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
 var parseDate = d3.time.format("%d-%b-%y").parse,
     bisectDate = d3.bisector(function(d) { return d.date; }).left,
