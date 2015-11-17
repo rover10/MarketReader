@@ -14,6 +14,7 @@ app.controller('finController', function($scope, $http){
     $scope.fun = function(name){
         return;
     };
+
     $scope.user = "Data";
         $scope.stockData = function(stockid){
         url = "http://www.google.com/finance/info?q=AAPL&callback=JSON_CALLBACK";        
@@ -33,14 +34,6 @@ app.controller('finController', function($scope, $http){
     };
     
 });
-
-
-
-
-	
-
-
-
 
 
 app.directive('draggable', function($document) {
